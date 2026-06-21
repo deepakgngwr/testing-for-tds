@@ -1,17 +1,15 @@
-name: Test Workflow
+name: Validate and Deploy
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: 22f1001001@ds.study.iitm.ac.in
+      - name: '22f1001001@ds.study.iitm.ac.in'
         run: echo "Hello, world!"
-
-      - name: Done
-        run: echo "Workflow completed"
